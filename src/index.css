@@ -168,6 +168,7 @@ input {
   align-items: center;
   margin-bottom: 12px;
   font-size: 1.1em;
+  color: #5c6f68; 
 }
 
 .question-container input[type="radio"] {
@@ -175,16 +176,46 @@ input {
   cursor: pointer;
 }
 
-.question-container label:hover {
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 5px;
-  transition: background-color 0.2s ease;
-}
-
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #eff6ee;
+  border-radius: 5px;
+  outline: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ea8c55;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #d97b44;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.1);
+}
+
+/* This creates the filled track effect */
+input[type="range"] {
+  background: linear-gradient(to right, #ea8c55 0%, #ea8c55 50%, #eff6ee 50%, #eff6ee 100%);
 }
