@@ -15,6 +15,7 @@ const Question = ({ questionData, onAnswer }) => {
     case 'slider':
       return <SliderQuestion {...rest} onAnswer={onAnswer} />
     default:
+      console.log(type);
       return <div>Invalid question type</div>
     
   }

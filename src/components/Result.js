@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 
-function Result({props}) {
+function Result({name, location, score}) {
     return (
         <div className="result">
             <div className="left">
                 <div className="schoolNameAndLink">
-                    <h2>School Name</h2>
+                    <h2>{name}</h2>
                     <button>More info</button>
                 </div>
-                <p>School Location</p>
+                <p>{location}</p>
             </div>
             <div className="right">
                 <div className="score-circle">
-                    <span>9.6</span>
+                    <span>{score}</span>
                 </div>
             </div>
         </div>
